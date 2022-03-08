@@ -1,0 +1,106 @@
+{% extends "base.html"%}
+{% block content %}
+    <div class="row">
+      <div class="column">
+        {% load static %} <img src="{% static "images/khen.png" %}" alt="owner!"  onclick="myFunction(this);"/>
+   
+      </div>
+      <div class="column">
+        {% load static %} <img src="{% static "images/khen.png" %}" alt="owner!"  onclick="myFunction(this);"/>
+       
+      </div>
+      <div class="column">
+        {% load static %} <img src="{% static "images/khen.png" %}" alt="owner!"  onclick="myFunction(this);"/>
+       
+      </div>
+      <div class="column">
+        {% load static %} <img src="{% static "images/khen.png" %}" alt="owner!"  onclick="myFunction(this);"/>
+       
+      </div>
+    </div>
+    
+    <!-- The expanding image container -->
+    <div class="container">
+      <!-- Close the image -->
+      <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    </div>
+      <!-- Expanded image -->
+      <img id="expandedImg" style="width: 100%; height: 530px;">
+    
+      <!-- Image text -->
+      <!-- <div id="imgtext"></div> -->
+      <div class="grid">
+    
+      <p class="cas">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quidem
+        ducimus quisquam eaque esse voluptas optio? Doloremque, vero dolores
+        nulla provident illum accusamus illo itaque quidem, animi dolorem
+        dignissimos libero. Excepturi quod cumque tempore ea totam, veritatis
+        sit quidem ducimus quas enim fugit ut omnis nulla rerum at! Ad nobis
+        ipsum minima tenetur hic eos itaque quae possimus molestias unde.
+        Repellendus error, distinctio quas consectetur provident dignissimos
+        corrupti eum laborum quos excepturi, pariatur aut assumenda culpa
+        perferendis voluptates, totam harum quae aperiam libero nostrum quis est
+        explicabo neque? Voluptates, eius! Ullam nihil quos, possimus placeat
+        odio pariatur atque neque? Sapiente eligendi eaque sequi distinctio
+        quos, provident amet autem fugiat laboriosam at maiores. Sequi numquam
+        error voluptates reprehenderit obcaecati vero quibusdam. Obcaecati
+        perspiciatis odit facere praesentium. Blanditiis repellendus iusto
+        veniam, libero laboriosam quidem non nam voluptate sit excepturi
+        consequuntur illum sed deserunt eligendi, voluptatem quo cupiditate,
+        autem nulla corrupti? Accusamus, tenetur! Sit ipsam reiciendis ipsa
+        tempora tenetur minus nihil dolore est veniam. Atque, harum ullam. Quo
+        quas cumque vitae aspernatur reprehenderit, molestias reiciendis quam
+        sequi ullam similique sint vero ad tenetur. Reprehenderit ducimus
+        placeat veritatis voluptates! Neque est libero enim nam optio maxime
+        eligendi, commodi voluptate voluptatibus similique corporis! Facilis
+        doloribus unde rem aut quibusdam quo consequatur sunt perspiciatis
+        eligendi iste! Magnam quisquam id exercitationem quis, sit excepturi
+        dicta veniam minus necessitatibus unde delectus cumque odio molestias
+        dignissimos facere a in debitis deserunt numquam. Atque alias dolor
+        sequi ad perferendis maxime.
+      </p>
+      <div class="card">
+        {% load static %} <img src="{% static "images/khen.png" %}" alt="owner!" class="prof-pic" />
+        <h2 class="name">Khanyiso Mgqolozana</h2>
+        <p class="title">Owner/Technician</p>
+        <ul class="certs">
+          <li><b> Certifications:</b></li>
+          <li>CompTia A+</li>
+          <li>CompTia Network+</li>
+          <li>Cisco Certified Networking Professional</li>
+        </ul>
+        <button class="book">Book</button>
+      </div>
+    </div>
+  </div>
+    <footer>
+      <ul class="footer">
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Site Map</a></li>
+        <li><a href="#">Agreement</a></li>
+        <li>
+          <a
+            class="fab fa-instagram"
+            href="https://www.instagram.com/interim_core/?hl=en"
+          ></a>
+        </li>
+      </ul>
+    </footer>
+    <script>
+      function myFunction(imgs) {
+    // Get the expanded image
+    var expandImg = document.getElementById("expandedImg");
+    // Get the image text
+    var imgText = document.getElementById("imgtext");
+    // Use the same src in the expanded image as the image being clicked on from the grid
+    expandImg.src = imgs.src;
+    // Use the value of the alt attribute of the clickable image as text inside the expanded image
+    imgText.innerHTML = imgs.alt;
+    // Show the container element (hidden with CSS)
+    expandImg.parentElement.style.display = "block";
+  }
+    </script>
+  </body>
+  {% endblock %}

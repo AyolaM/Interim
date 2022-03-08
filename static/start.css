@@ -1,0 +1,294 @@
+:root {
+  --rgba-main: rgba(1, 124, 254, 255);
+  --hex-main: #017cfe;
+  --gradient: linear-gradient(
+    90deg,
+    hsla(213, 74%, 79%, 1) 8%,
+    hsla(203, 89%, 71%, 1) 31%,
+    hsla(0, 0%, 96%, 1) 100%
+  );
+  --card-gradient: linear-gradient(
+    90deg,
+    hsla(186, 33%, 94%, 1) 0%,
+    hsla(216, 41%, 79%, 1) 100%
+  );
+}
+
+* {
+  margin: 0;
+  /* makes sure that the padding and border are included in the total width and height of the elements. */
+  box-sizing: border-box;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  color: #111111;
+
+  /* border: 1px solid #017cfe; */
+}
+
+body {
+  background-color: #f7f3ed;
+}
+
+/************************ Header *****************************/
+header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  background: var(--gradient);
+}
+
+.logo {
+  cursor: pointer;
+  justify-content: left;
+  padding: 10px;
+  margin: 15px;
+  width: 180px;
+  height: 140px;
+}
+
+.navbar li {
+  display: inline-block;
+  justify-content: center;
+  /* padding: 12px; */
+}
+
+.navbar li a {
+  color: black;
+  font-size: 20px;
+  padding: 12px;
+  margin: 20px;
+}
+
+.navbar li a:hover {
+  background-color: var(--hex-main);
+  border-radius: 25px;
+  padding: 5px 10px;
+  color: white;
+}
+.navbar li a:active {
+  font-size: 25px;
+}
+/************* Cart **************/
+#cart {
+  size: 18px;
+  color: black;
+  padding: 15px;
+  margin-left: 5px;
+}
+#cart:hover {
+  background-color: var(--hex-main);
+  border-radius: 25px;
+  padding: 7px 10px;
+  color: white;
+}
+/*******Contact Button *************/
+button {
+  padding: 9px 20px;
+  border: var(--hex-main);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+/*** contact us Button hover light blue ********/
+.cta :hover {
+  background: var(--hex-main);
+  color: white;
+  transition: all 0.3s ease 0s;
+}
+
+/**********************Profile Card *********************/
+.grid {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  grid-template-rows: 1fr;
+  grid-gap: 10px;
+  margin: 0 15px;
+
+  padding: 0 12px;
+}
+.card {
+  text-align: center;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  padding: 15px;
+  margin: auto;
+  box-shadow: 2px 3px 4px;
+  border-radius: 25px;
+  height: fit-content;
+  width: fit-content;
+  border: none;
+  background: var(--card-gradient);
+}
+.prof-pic {
+  border-radius: 50%;
+  border: 10px solid #017cfe;
+}
+.certs {
+  padding: 10px;
+  margin: 10px;
+}
+
+.title {
+  color: gray;
+  padding: 10px;
+  margin: 10px;
+}
+
+.book {
+  width: 100%;
+  background: var(--hex-main);
+}
+
+.book:hover {
+  background: var(--gradient);
+  border-radius: 25px;
+  padding: 5px 10px;
+  color: white;
+}
+
+/********************** Container/ main text *******************/
+.cas {
+  width: fit-content;
+  grid-row-start: 2;
+  text-align: left;
+  font-size: 18px;
+  line-height: 28px;
+}
+/********************** Footer ********************************/
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--gradient);
+  margin-top: 12px;
+}
+footer a {
+  color: black;
+  font-size: 16px;
+  padding: 10px;
+  margin: 10px;
+}
+.footer :hover {
+  background-color: var(--hex-main);
+  border-radius: 25px;
+  padding: 5px 10px;
+  color: white;
+}
+/*********************Services ************************/
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
+  padding: 10px;
+  margin: 10px;
+}
+.quote {
+  text-align: center;
+  padding: 5px;
+  margin-top: 25px;
+  background: var(--card-gradient);
+}
+
+.profile-pic {
+  border-radius: 50%;
+  border: 10px solid #017cfe;
+  width: 150px;
+  height: 150px;
+}
+
+.service-card {
+  /* border: 1px solid blue; */
+  background: var(--card-gradient);
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 2px 3px 4px;
+  border-radius: 25px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.service-card p {
+  padding: 8px;
+}
+
+/************************* Map **********************/
+
+#map {
+  height: 400px;
+  width: 100%;
+  padding: 10px;
+}
+
+.map-title {
+  text-align: center;
+  padding: 16px;
+  margin: 16px;
+}
+
+/******************* Contact Us page *******************/
+.contact-us {
+  text-align: left;
+  padding: 200px;
+  margin: 18px;
+  height: auto;
+  width: 100%;
+  justify-content: center;
+  padding: 50%;
+  margin: 50%;
+  background-color: #017cfe;
+}
+
+/********************* SlideShow *****************************/
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 15px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container (positioning is needed to position the close button and the text) */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}

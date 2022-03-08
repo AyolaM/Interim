@@ -1,0 +1,99 @@
+{% extends "base.html"%}
+{% block content %}
+
+<form  id="submitted" action="" method="POST">
+  {% csrf_token %}
+  <div id="contact-card">
+    <table class="contact-us">
+      {{ form.as_table }} 
+      <tr>
+        <td>Your Name</td>
+        <td><input type="text" placeholder="Name" required /></td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td><input type="email" placeholder="Email Address" required /></td>
+      </tr>
+      <tr>
+        <td>Contact Number (Optional)</td>
+        <td><input type="phone number" placeholder="Phone number" /></td>
+      </tr>
+      <tr>
+        <td>Message</td>
+        <td>
+          <textarea
+            name="textarea"
+            id="textarea"
+            placeholder="Message"
+            cols="20"
+            rows="10"
+            required
+          ></textarea>
+        </td>
+      </tr>
+    </table>
+    <button type="submit" class="submit">Submit</button>
+ 
+  </form>
+</div>
+  <h1 class="map-title">Services Available In This Radius</h1>
+  <div id="map"></div>
+  <footer>
+    <ul class="footer">
+      <li><a href="Index.html">Home</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Site Map</a></li>
+      <li><a href="#">Agreement</a></li>
+      <li>
+        <a
+          class="fab fa-instagram"
+          href="https://www.instagram.com/interim_core/?hl=en"
+        ></a>
+      </li>
+    </ul>
+  </footer>
+
+  <!-- Javascript -->
+  <script>
+    var citymap = {
+      SilverSpring: {
+        center: { lat: 41.878, lng: -87.629 },
+        population: 2714856,
+      },
+    };
+    function initMap() {
+      // Create the map.
+      var map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 11,
+        center: { lat: 38.99, lng: -77.026 },
+      });
+      var citymap = {
+        SilverSpring: {
+          center: { lat: 41.878, lng: -87.629 },
+          population: 81773,
+        },
+      };
+      // Construct the circle for each value in citymap.
+      // Note: We scale the area of the circle based on the population.
+      for (var city in citymap) {
+        // Add the circle for this city to the map.
+        var cityCircle = new google.maps.Circle({
+          strokeColor: "#017cfe",
+          center: SilverSpring,
+          // 30 miles in meters
+          radius: 48280,
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: "#017cfe",
+          fillOpacity: 0.35,
+        });
+      }
+    }
+    
+  </script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=XXXXXXXXXXXXXXXXXXXXXXXXX&callback=initMap&v=weekly"
+    async
+  ></script>
+  </body>
+  {% endblock %}
