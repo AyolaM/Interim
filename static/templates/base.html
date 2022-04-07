@@ -19,16 +19,16 @@
     <header class="header">
         {% load static %} <a href="Index.html"></a> <img src="{% static "images/interim.png" %}" alt="owner!" class="logo" /></a>
      <!-- <a href="Index.html"> <img class="logo" src="images/interim.png" alt="interim core logo" /></a> -->
-      <!-- <nav id="nav"> -->
+      <nav id="nav">
       <ul class="navbar">
         <li><a href="{% url 'home.page'%}">Home</a></li>
         <li><a href="{% url 'int.services'%}">Services</a></li>
         <li><a href="{% url 'int.products'%}">Products</a></li>
       </ul>
-      <!-- </nav> -->
+     
       <a class="cta" href="{% url 'int.contact'%}"><button>Contact Us</button></a>
       <a id="cart" href="#" class="fas fa-shopping-cart"></a><br>
-      
+    </nav>
       
     </header>
     <body>
